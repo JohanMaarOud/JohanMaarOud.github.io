@@ -4,10 +4,14 @@
 
 <head>
     <title>My html site!</title>
+    <meta charset="utf-8">
 </head>
 
 <body>
     <header>
+        <a href="#formForF1People"><img id="main-logo"
+                src="https://www.dehaagsehogeschool.nl/images/default-source/over-de-hogeschool/logo's-hhs/hhs_nl_groen_hex-2018-resample.png?sfvrsn=a3ddc3b7_0&MaxWidth=240&MaxHeight=67&ScaleUp=false&Quality=High&Method=ResizeFitToAreaArguments&Signature=303FA567CE859CADE67422463018670F5ED89875"
+                alt="The home logo"></a>
         <h1>Hey There!</h1>
         <h2>Nice to meet you!</h2>
         <h3>My name is Johan!</h3>
@@ -37,7 +41,7 @@
         <li>Alpha Tauri</li>
         <li>And many more!</li>
     </ul>
-    <h4>Who was on the podium celebrating on the Hongarian grand prix of 2022</h4>
+    <h4>Who was on the podium celebrating on the Hongarian grand prix of 2022?</h4>
     <ol class="podium_with_driver_names">
         <li>Max Verstappen</li>
         <li>Lewis Hamilton</li>
@@ -46,29 +50,92 @@
     <hr>
     <h2>Now it is time with the form!</h2>
     <form id="formForF1People">
-        <label for="nameUser">What is your name?</label>
-        <input type="text" id="nameUser" name="nameUser">
+        <label for="nameUser">What is your name?*</label>
+        <input type="text" id="nameUser" name="nameUser" placeholder="Your name here!" required>
         <br>
         <label for="worstPassword">What is your worst password?</label>
-        <input type="password" id="worstPassword" name="worstPassword">
+        <input type="password" id="worstPassword" name="worstPassword" placeholder="Password!">
         <br>
         <label for="ageUser">And what is your age?</label>
-        <input type="number" id="ageUser" name="ageUser" min="2" max="200">
+        <input type="number" id="ageUser" name="ageUser" min="2" max="200" placeholder="Age ">
         <br>
         <label for="favoriteDriver">Who is your favorite F1 driver?</label>
-        <input type="text" id="favoriteDriver" name="favoriteDriver">
+        <input type="text" id="favoriteDriver" name="favoriteDriver" placeholder="Choose wisely!">
         <br>
         <label for="ratingSeason">From 1 to 10, what is your rating of the current season?</label>
+        <!-- The one is infront of the range input, becuase it needs to be left in the view of the range input-->
         1<input type="range" min="1" max="10" step="0.5">10
         <br>
-        <label for"checkIt">Check 2 boxes!</label>
-        <input type="checkbox" id="One" value="1" name="checkIt">
-        <input type="checkbox" id="Two" value="2" name="checkIt">
-        <input type="checkbox" id="Three" value="3" name="checkIt">
-        <input type="checkbox" id="Four" value="4" name="checkIt">
+        <p>Check 2 boxes!</p>
+        <label for="One">1</label><input type="checkbox" id="One" value="1" name="checkIt">
+        <label for="Two">2</label><input type="checkbox" id="Two" value="2" name="checkIt"><br>
+        <label for="Three">3</label><input type="checkbox" id="Three" value="3" name="checkIt">
+        <label for="Four">4</label><input type="checkbox" id="Four" value="4" name="checkIt">
+        <br>
+        <label for="winner2022">Who is going to win the 2022 F1 world championship?</label>
+        <br>
+        <input type="radio" id="Mercedes-AMG" value="Mercedes" name="FavF1Team"><label
+            for="Mercedes-AMG">Mercedes-AMG</label>
+        <br>
+        <input type="radio" id="Red Bull" value="Red Bull" name="FavF1Team"><label for="Red Bull">Red Bull</label>
+        <br>
+        <input type="radio" id="Ferrari" value="Ferrari" name="FavF1Team"><label for="Ferrari">Ferrari</label>
+        <br>
+        <label for="nextAlpineDriver">Who is going to be the next <strong>Alpine</strong> F1 driver in 2023?</label>
+        <select id="nextAlpineDriver" name="nextAlpineDriver">
+            <option value="Daniel Riciardo">Daniel Riciardo</option>
+            <option value="Oscar Piastri">Oscar Piastri</option>
+            <option value="Nyck de Vries">Nyck de Vries</option>
+            <option vlaue="Nico Hülkenberg">Nico H&#252lkenberg</option>
+        </select>
+        </label>
+        <br>
+        <label for="Best_Land">Wich country in this list is in your opinion the best country in the world?</label>
+        <input id="Best_land" name="Best_Land" type="text" list="Best_Lands" placeholder="Fill in any country you want!">
+        <datalist id="Best_Lands">
+            <option value="The Netherlands"></option>
+            <option value="Great Britain"></option>
+            <option value="France"></option>
+            <option value="South Korea"></option>
+            <option value="United States of America"></option>
+            <option value="Canada"></option>
+            <option value="Germany"></option>
+            <option value="italy"></option>
+            
+        </datalist><br>
+        <label for="extra"><em>Do you have something <mark>extra</mark> you want to say?</em></label><br>
+        <textarea id="extra" name="extra" rows="5" cols="50" minlength="5" maxlength="200">Do you have something to say?</textarea><br>
+        <input type="submit" value="Send!">
     </form>
     <hr>
     <h2>Here is a random table for good measure!</h2>
+    <table>
+        <caption>F1 teams</caption>
+        <thead>
+            <th>F1 team</th>
+            <th>Team Chief</th>
+            <th colspan="2">Driver A</th>
+            <th colspan="2">Driver B</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mercedes-AMG F1</td>
+                <td>Toto Wolff</td>
+                <td>Lewis</td>
+                <td>Hamilton</td>
+                <td>George</td>
+                <td>Russell</td>
+            </tr>
+            <tr>
+                <td>Oracle Red Bull Racing</td>
+                <td>Christian Horner</td>
+                <td>Max</td>
+                <td>Verstappen</td>
+                <td>Sergio</td>
+                <td>Perez</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
